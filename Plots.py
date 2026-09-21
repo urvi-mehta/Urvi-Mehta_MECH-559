@@ -60,14 +60,12 @@ for idx, P_0 in enumerate(P0_values):
     ax2.plot(k_values, R_results, marker='s', linestyle='--', linewidth=1.5, color=colors[idx], label=f'$R^*\\,(P_0={int(P_0)}\\text{{W}})$')
     ax2.plot(k_values, L_results, marker='^', linestyle='-', linewidth=1.5, color=colors[idx], label=f'$L^*\\,(P_0={int(P_0)}\\text{{W}})$')
 
-# --- Formatting Subplot 1 (Mass Trends) ---
 ax1.set_xlabel('Thrust Margin Factor ($k$)', fontsize=11)
 ax1.set_ylabel('Optimal Arm Mass $W^*$ (kg)', fontsize=11)
 ax1.set_title('Optimal Arm Mass vs. Thrust Margin', fontsize=12, fontweight='bold')
 ax1.grid(True, linestyle='--', alpha=0.5)
 ax1.legend(title="Motor Rated Power")
 
-# --- Formatting Subplot 2 (Dimension Trends) ---
 ax2.set_xlabel('Thrust Margin Factor ($k$)', fontsize=11)
 ax2.set_ylabel('Optimal Dimension Value (m)', fontsize=11)
 ax2.set_title('Optimal Geometry ($R^*$ & $L^*$) vs. Thrust Margin', fontsize=12, fontweight='bold')
@@ -78,4 +76,3 @@ plt.tight_layout()
 
 # Save complete file to your computer directory
 plt.savefig('drone_dimension_trends.png', dpi=300, bbox_inches='tight')
-print("Complete plots compiled successfully and saved as 'drone_dimension_trends.png'")
